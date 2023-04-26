@@ -2,7 +2,7 @@
 CREATING/INSERTING INTO TABLES
 
 CREATE TABLE pokemon (pokedex_number INTEGER PRIMARY KEY, name TEXT, classification TEXT, type1 TEXT, type2 TEXT, height_m FLOAT, weight_kg FLOAT, base_happiness INTEGER, capture_rate INTEGER, base_egg_steps INTEGER, ability TEXT, percentage_male FLOAT, generation INTEGER, is_legendary INTEGER);
-CREATE TABLE against (pokedex_number INTEGER PRIMARY KEY, name TEXT, against_bug NUMERIC, against_dark NUMERIC, against_dragon NUMERIC, against_electric NUMERIC, against_fairy NUMERIC, against_fight NUMERIC, against_fire NUMERIC, against_flying NUMERIC, against_ghost NUMERIC, against_grass NUMERIC, against_ground NUMERIC, against_ice NUMERIC, against_normal NUMERIC, against_poison NUMERIC, against_psychic NUMERIC, against_rock NUMERIC, against_steel NUMERIC, against_water NUMERIC, FOREIGN KEY (pokedex_number) REFERENCES pokemon(pokedex_number));
+CREATE TABLE against (pokedex_number INTEGER PRIMARY KEY, name TEXT, against_bug NUMERIC, against_dark NUMERIC, against_dragon NUMERIC, against_electric NUMERIC, against_fairy NUMERIC, against_fight NUMERIC, against_fire NUMERIC, against_flying NUMERIC, against_ghost NUMERIC, against_grass NUMERIC, against_ground NUMERIC, against_ice NUMERIC, against_normal NUMERIC, against_poison NUMERIC, against_psychic NUMERIC, against_rock NUMERIC, against_steel NUMERIC, against_water NUMERIC);
 
 INSERT INTO pokemon (pokedex_number, name, classification, type1, type2, height_m, weight_kg, capture_rate, base_egg_steps, ability, percentage_male, base_happiness, is_legendary, generation)
    ...> SELECT pokedex_number, name, classfication, type1, type2, height_m, weight_kg, capture_rate, base_egg_steps, ability, percentage_male, base_happiness, is_legendary, generation
