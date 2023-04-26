@@ -5,4 +5,4 @@ INSERT INTO stats (pokedex_number, name, attack, speed, hp, sp_attack, sp_defens
    ...> FROM imported_pokemon_data;
 
 
-ALTER TABLE pokemon ADD CONSTRAINT fk_stats_pokemon FOREIGN KEY (pokedex_number) REFERENCES stats(pokedex_number);
+ALTER TABLE stats ADD FOREIGN KEY (pokedex_number) REFERENCES pokemon(pokedex_number);
